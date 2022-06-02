@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Career Guide.com
+    </title>
+
+
+
+
+    <style>
+        .nav-ul-li {
+            font-size: 13px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <nav id="nav">
+
+        <a href="" target="">
+            <img loading="lazy" src="https://i.ibb.co/w0BJt1L/cg-logo.png">
+        </a>
+        <style>
+            body {
+                position: relative;
+            }
+
+            nav {
+                position: fixed;
+                width: 100%;
+                height: 7vh;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                z-index: 100;
+                background-color: white;
+                box-shadow: 0px 0px 20px 0px #ccc;
+            }
+
+            .nav-ul {
+                display: flex;
+                list-style: none;
+                width: 75%;
+                align-items: center;
+                background-color: white;
+                margin: 1vh 0;
+                text-overflow: clip;
+                white-space: nowrap;
+
+            }
+
+
+
+
+            .nav-ul-a:hover,
+            .nav-ul-a:active,
+            .myacc span:hover,
+            .myacc span:active {
+                background-color: #2c65ba;
+                color: white !important;
+                padding: 8px 13px;
+
+                border-radius: 7px;
+                cursor: pointer;
+                height: 7vh;
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .nav-ul-a:hover+.drop,
+            .drop:hover,
+            .nav-ul-a:active+.drop {
+                transform: translateY(0px);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .myacc span:hover+ul,
+            .myacc ul:hover,
+            .myacc span:active+.ul {
+                transform: translateY(0px);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            
+
+            .myacc {
+                position: absolute;
+                font-weight: 600;
+                padding: 8px 10px;
+                border-radius: 7px;
+                box-sizing: border-box;
+                right: 10px;
+            }
+
+           
+            nav img {
+                padding: 0 20px;
+                width: 200px;
+            }
+
+            .drop,
+            .myacc ul {
+                position: absolute;
+                top: 6vh;
+                left: 240px;
+                width: calc(82% + 40px);
+                height: 330px;
+                background-color: rgb(250, 250, 250);
+                -webkit-box-shadow: -29px -4px 38px -44px rgba(148, 148, 148, 1);
+                -moz-box-shadow: -29px -4px 38px -44px rgba(148, 148, 148, 1);
+                box-shadow: -29px -4px 38px -44px rgba(148, 148, 148, 1);
+                transform: translateY(10px);
+                pointer-events: none;
+                opacity: 0;
+                transition: all 0.4s ease-in;
+            }
+
+            .drop.psychometric {
+                left: 0px;
+                width: 100%;
+            }
+
+            .large-drop .drop {
+                height: 300px;
+            }
+
+            .side-list {
+                display: flex;
+            }
+
+            .list-subsec ul .side-list-a {
+                font-size: 16px !important;
+                margin: 10px 0;
+                color: black;
+            }
+
+            .myacc ul {
+                left: 0px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                list-style: none;
+                border-radius: 7px;
+                top: 5.4vh;
+            }
+
+            .drop .contact {
+                height: 100%;
+                width: 45%;
+                background-color: #efefef;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .list {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: calc(55%);
+            }
+
+            .listul {
+                width: 90%;
+                height: 90%;
+                display: flex;
+                margin: 5% auto;
+                padding: 0;
+                justify-content: start;
+            }
+
+            .listul .list-subsec {
+                display: inline;
+                height: 100%;
+                /* width: 50%; */
+                margin-right: 20px;
+                text-align: start;
+            }
+
+            .list-subsec ul {
+                /* margin: 30px 0; */
+                padding: 0;
+                height: 100%;
+                min-width: 150px;
+                width: 100%;
+                margin-right: 70px;
+            }
+
+            .list-subsec li {
+                display: block;
+                width: 100%;
+                padding: 1px 0;
+            }
+
+            .institutes .list-subsec li {
+                max-width: 250px;
+            }
+
+            .institutes .list-subsec {
+                margin-right: 75px;
+                max-width: 220px;
+            }
+
+            .listul a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .list-subsec .bold {
+                font-weight: 600;
+                padding: 0px 0;
+            }
+
+            .listul .last {
+                margin-right: 0;
+            }
+
+            .price {
+                padding-left: 20px;
+                padding-right: 20px;
+                color: inherit;
+                outline: none;
+                text-decoration: none;
+            }
+
+            .contact div {
+                position: absolute;
+            }
+
+            .phone {
+                left: 10%;
+                top: 13%;
+            }
+
+            .phone h3 {
+                color: rgb(57, 57, 223);
+            }
+
+            .large-drop .contact .phone {
+                top: 20%;
+            }
+
+            .connect {
+                right: 10%;
+                top: 10%;
+            }
+
+            .large-drop .contact .connect {
+                top: 20%;
+            }
+
+            .links {
+                bottom: 10%;
+                left: 10%;
+                font-size: 13px;
+            }
+
+            .large-drop .contact .links {
+                bottom: 20%;
+            }
+
+            .apps {
+                right: 10%;
+                bottom: 10%;
+            }
+
+            .large-drop .contact .apps {
+                bottom: 20%;
+            }
+
+            .links a {
+                display: block;
+                color: rgb(57, 57, 223);
+                text-decoration: none;
+                font-weight: 600;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .contact h3 {
+                color: rgb(57, 57, 223);
+                margin: 13px 0px;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            .connect h3 {
+                color: rgb(57, 57, 223);
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            .apps div {
+                color: rgb(57, 57, 223);
+                position: relative;
+            }
+
+            .apps h3 {
+                color: rgb(57, 57, 223);
+            }
+
+            .apps img {
+                width: 150px;
+                padding: 3px;
+            }
+
+            .apps h3 {
+                margin: 0
+            }
+
+            .icons img {
+                width: 35px;
+                height: 35px;
+                padding: 2px;
+            }
+
+            .icons {
+                width: 100%;
+                display: flex;
+                position: relative !important;
+            }
+
+         
+            .slide-contact {
+                display: none;
+            }
+
+            .list-subsec li {
+                font-size: 18px;
+            }
+
+            .list-subsec ul a {
+                font-size: 13px;
+                color: #828282;
+            }
+
+            .list-subsec ul .inner-sub a {
+                color: black;
+                font-size: 18px;
+            }
+
+            .list-subsec ul .inner-sub {
+                margin-top: 15px;
+                text-transform: uppercase;
+            }
+
+            @media screen and (max-width:1400px) {
+                .list-subsec ul {
+                    min-width: 0;
+                }
+            }
+
+            @media screen and (max-width:1150px) {
+                .nav-ul-a {
+                    font-size: 11px;
+                }
+
+                .myacc {
+                    font-size: 11px;
+                }
+
+                nav img {
+                    padding: 0 5px;
+                }
+
+                .nav-ul {
+                    padding: 0;
+                }
+
+                .drop {
+                    left: 205px;
+                }
+
+                .phone {
+                    left: 1%;
+                    top: 1%;
+                }
+
+                .connect {
+                    right: 1%;
+                    top: 1%;
+                }
+
+                .links {
+                    bottom: 1%;
+                    left: 1%;
+                }
+
+                .apps {
+                    right: 1%;
+                    bottom: 1%;
+                }
+            }
+
+            .hamburger {
+                height: 2.5vh;
+                margin: 2.3vh 10px;
+                display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+
+            .hamburger .line {
+                width: 23px;
+                height: 3px;
+                background-color: rgb(46, 46, 46);
+                border-radius: 7px;
+            }
+
+            .nav-ul-active {
+                transform: translateX(0) !important;
+            }
+
+            .each-app {
+                text-decoration: none;
+                color: black;
+                outline: none;
+            }
+
+            .apps a {
+                text-decoration: none;
+            }
+
+            .search-icon {
+                position: fixed;
+                bottom: 70px;
+                right: 30px;
+                padding: 15px;
+                background-color: white;
+                border-radius: 50%;
+                font-size: 1.5em;
+            }
+
+            @media screen and (max-width:1170px) {
+            .hero-wrap .slider-text h1 {
+                font-size: 50px;
+            }
+        }
+
+            @media screen and (max-width: 1000px) {
+                .nav-ul {
+                    position: absolute;
+                    top: 5vh;
+                    flex-direction: column;
+                    width: 100%;
+                    transition: all 0.5s ease;
+                    transform: translateX(100%);
+                    align-items: start;
+                    overflow: scroll;
+                }
+
+                .nav-ul-height-def {
+                    height: 435px !important;
+                }
+
+                .nav-ul-height-log {
+                    height: 480px !important;
+                }
+
+                .phone-num {
+                    margin-left: 10px !important;
+                    margin-right: auto !important;
+                }
+
+
+                .institutes .list-subsec li {
+                    max-width: none;
+                }
+
+                .side-list {
+                    display: block;
+                }
+
+                .side-list>li {
+                    margin: 10px 0;
+                }
+
+                .myacc ul {
+                    height: 100px;
+                }
+
+                .nav-ul-a,
+                .myacc span {
+                    font-size: 15px;
+                    display: inline-block;
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .myacc span {
+                    font-weight: 700;
+                }
+
+                .myacc {
+                    position: relative;
+                }
+
+                nav {
+                    justify-content: space-evenly;
+                }
+
+                .nav-ul-li,
+                .myacc {
+                    width: 100%;
+                    /* padding: 5px; */
+                    border-bottom: 1px solid grey;
+                }
+
+                .nav-ul-a,
+                .myacc span {
+                    width: 100%;
+                }
+
+                .hamburger {
+                    display: flex;
+                }
+
+                .drop,
+                .myacc ul,
+                .large-drop .drop {
+                    position: relative;
+                    left: 0px;
+                    width: 100%;
+                    overflow: hidden;
+                    height: 0px;
+                    background-color: rgb(250, 250, 250);
+                    -webkit-box-shadow: -29px -4px 38px -44px rgba(148, 148, 148, 1);
+                    -moz-box-shadow: -29px -4px 38px -44px rgba(148, 148, 148, 1);
+                    box-shadow: -29px -4px 38px -44px rgba(148, 148, 148, 1);
+                    transform: translateY(0px);
+                    pointer-events: all;
+                    opacity: 1;
+                    transition: all 0.4s ease-in;
+                }
+
+                .nav-ul-a:hover,
+                .nav-ul-a:active {
+                    background-color: #2c65ba;
+                    color: white;
+                }
+
+                .nav-ul-a:hover+.drop,
+                .drop:hover,
+                .nav-ul-a:active+.drop {
+                    height: auto;
+                    margin-bottom: 30px;
+                    margin-top: 0;
+                }
+
+                .myacc span:hover+ul,
+                .myacc ul:hover,
+                .myacc span:active+.ul {
+                    height: 100px;
+                    margin-bottom: 30px;
+                    margin-top: 0;
+                }
+
+                .list {
+                    position: relative;
+                    height: auto;
+                    width: calc(100%);
+                }
+
+                .listul {
+                    display: block;
+                }
+
+                .drop .contact {
+                    display: none;
+                }
+
+                .slide-contact {
+                    display: block;
+                    padding: 10px;
+                }
+
+                .slide-contact>div {
+                    margin: 20px 0;
+                }
+
+                .slide-contact .side-list {
+                    display: block;
+                }
+
+                .list-subsec .bold {
+                    padding: 12px 0;
+                }
+
+                .price {
+                    padding-left: 13px;
+                }
+
+                .myacc {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 13px;
+                    padding-right: 0px;
+                }
+
+                .myacc span {
+                    padding-left: 13px;
+                    padding-right: 0;
+                }
+
+                .institutes .list-subsec li {
+                    max-width: none;
+                }
+
+                institutes .list-subsec {
+                    max-width: none;
+                }
+            }
+           
+        </style>
+
+        <ul class="nav-ul nav-ul-height-def">
+            <li class="nav-ul-li">
+                <a href="" class="nav-ul-a">Students</a>
+
+            </li>
+            <li class="nav-ul-li">
+                <a href=""
+                    class="nav-ul-a price">Consultants</a>
+
+            </li>
+            <li class="nav-ul-li">
+                <a href=""
+                    class="nav-ul-a price">Professionals</a>
+
+            </li>
+            <li class="nav-ul-li">
+                <a href="" class="nav-ul-a price">institutes</a>
+
+            </li>
+            <li class="nav-ul-li">
+                <a href=""
+                    class="nav-ul-a price">Pricing</a>
+
+           
+
+            <div class="myacc">
+
+                <span><a href="">Sign In</a></span>
+
+            </div>
+
+            <script>v_m_isLogin = 0;</script>
+
+        </ul>
+        <br>
+
+        
+        
+        
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+       
+    </nav>
+   
+     <div class="hero-wrap" style="height: 522px;">
+        <div class="overlay"></div>
+        <div class="container-fluid px-0">
+            <div class="row d-md-flex no-gutters slider-text align-items-center  justify-content-end" style="height: 562px;">
+                <!--	<img class="one-third js-fullheight align-self-end order-md-last img-fluid" src="images/undraw_pair_programming_njlp.svg" alt=""> -->
+                <div class="one-forth d-flex align-items-center  " style="width: 100%; background-image: url(https://www.careerguide.com/images_new/career-guidance-in-india-edited-min.png); background-size: cover; height: 562px;">
+                    <div class="text mt-5" style="max-width: 100% !important; text-align: center; margin-top: 0px !important; margin-left:10px">
+                        <!--<span class="subheading" style="color: white;">Welcome To CAREERGUIDE</span>-->
+                        <h1 class="mb-3" style="color: white;"><span>Your Career Is Your Life</span>
+                            <!--<span>Development,</span> <span>Hosting</span>-->
+                        </h1>
+                        <p style="color: white;">Scientifically plan your career with the help of Certified Career Counsellors & AI enabled Technologies</p>
+                        <p>
+                            <a href="https://www.careerguide.com/career/career-counselling-for-10th-class" class="btn btn-primary pd-1 py-1 btmob" style="margin: 11px 8px 0px 8px; box-shadow: 0 0 10px 0 white; width: 130px;">Class 10</a>
+                            <a href="https://www.careerguide.com/career/career-counselling-for-12th-class" class="btn btn-primary pd-1 py-1 btmob" style="margin: 11px 8px 0px 8px; box-shadow: 0 0 10px 0 white; width: 130px;">Class 11-12</a>
+                            <a href="https://www.careerguide.com/career/career-counselling-services-for-masters-2" class="btn btn-primary pd-1 py-1 btmob" style="margin: 11px 8px 0px 8px; box-shadow: 0 0 10px 0 white; width: 130px;">College</a>
+                            <a href="https://www.careerguide.com/career/counsellor" class="btn btn-primary pd-1 py-1 btmob" style="margin: 11px 8px 0px 8px; box-shadow: 0 0 10px 0 white; width: 130px;">Counsellors</a>
+                            <a href="https://www.careerguide.com/career/career-counselling-services-for-working-professionals" class="btn btn-primary pd-1 py-1 btmob" style="margin: 11px 8px 0px 8px; box-shadow: 0 0 10px 0 white; width: 130px;">Professionals</a>
+                            <a href="https://www.careerguide.com/career/abroad-studies" class="btn btn-primary pd-1 py-1 btmob" style="margin: 11px 8px 0px 8px; box-shadow: 0 0 10px 0 white; width: 130px;">Study Abroad</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
